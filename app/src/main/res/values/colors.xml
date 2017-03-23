@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+
+    <!--
+        命名规范
+        1.以bg开头。
+        2.页面：名称_activity/名称_fragment/名称_dialog 等等。
+
+        例：bg_login_activity_btn_submit
+
+    -->
+
+    <color name="bg_welcome_activity">#21caad</color>
+</resources>
