@@ -17,6 +17,19 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+    }
 }
 
 dependencies {
@@ -32,5 +45,6 @@ dependencies {
     compile 'com.daimajia.androidanimations:library:2.2@aar'
     compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.0'
     compile 'com.lcodecorex:tkrefreshlayout:1.0.6'
+    compile 'com.squareup.retrofit2:converter-jackson:2.2.0'
     testCompile 'junit:junit:4.12'
 }

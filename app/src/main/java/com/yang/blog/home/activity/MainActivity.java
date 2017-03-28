@@ -13,8 +13,10 @@ import com.yang.blog.R;
 import com.yang.blog.base.BaseActivity;
 import com.yang.blog.home.adapter.HomeBlogListAdapter;
 import com.yang.blog.model.BlogListBean;
+import com.yang.blog.net.NetWorkUtils;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class MainActivity extends BaseActivity{
 
@@ -57,6 +59,7 @@ public class MainActivity extends BaseActivity{
             @Override
             public void onRefresh(TwinklingRefreshLayout refreshLayout) {
                 super.onRefresh(refreshLayout);
+                NetWorkUtils.requestData("yblog/getList",new HashMap<String, String>());
             }
 
             @Override
