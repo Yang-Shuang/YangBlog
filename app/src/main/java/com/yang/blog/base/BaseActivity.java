@@ -10,6 +10,12 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.yang.blog.R;
+import com.yang.blog.net.NetWorkUtils;
+import com.yang.blog.net.listener.RequestListener;
+import com.yang.blog.net.listener.SimpleRequestListener;
+
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by YangShuang
@@ -64,5 +70,35 @@ public class BaseActivity extends FragmentActivity{
             linearLayout = (LinearLayout) findViewById(R.id.titlebar_layout_ll);
         }
         return linearLayout;
+    }
+
+    public <T> void requestData(BaseRequest request,final RequestListener<T> listener){
+
+        NetWorkUtils.requestData(this, request, new SimpleRequestListener<T>() {
+            @Override
+            public void onSuccess(T response) {
+                listener.onSuccess(response);
+            }
+
+            @Override
+            public void onError(int errorCode, String errorMsg) {
+                listener.onError(errorCode,errorMsg);
+            }
+        });
+    }
+
+    @Override
+    public void finish() {
+        NetWorkUtils.getInstance().cancelRequest(getClass());
+        super.finish();
+    }
+
+    @Override
+    protected void onDestroy() {
+        NetWorkUtils.getInstance().cancelRequest(getClass());
+//        if (errorRequestMap != null) {
+//            errorRequestMap.clear();
+//        }
+        super.onDestroy();
     }
 }

@@ -9,7 +9,7 @@ import java.util.List;
  * on 2017/3/27.
  */
 
-public abstract class BaseRecyclerViewAdapter<T extends BaseBean> extends BaseQuickAdapter<T,BaseRecyclerViewHolder>{
+public abstract class BaseRecyclerViewAdapter<T> extends BaseQuickAdapter<T,BaseRecyclerViewHolder>{
     public BaseRecyclerViewAdapter(int layoutResId, List<T> data) {
         super(layoutResId, data);
     }
