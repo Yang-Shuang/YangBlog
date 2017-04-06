@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/barTitle"
+    android:layout_width="match_parent"
+    android:layout_height="44dp"
+    android:background="@color/colorWhite">
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/btnTitleLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@color/colorTransparent"
+        android:padding="15dp"
+        android:src="@mipmap/btn_back" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:background="@color/colorTransparent"
+        android:textColor="#032124"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginRight="20dp"
+        android:background="@color/colorTransparent"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:textColor="#13A5B5"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_gravity="bottom"
+        android:background="@color/divider_line" />
+</FrameLayout>

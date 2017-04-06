@@ -5,6 +5,7 @@
     android:background="@color/bg_welcome_activity">
 
     <ImageView
+        android:background="@color/colorTransparent"
         android:layout_marginTop="120dp"
         android:layout_centerHorizontal="true"
         android:contentDescription="@null"
@@ -13,6 +14,7 @@
         android:src="@mipmap/icon_blog"/>
 
     <TextView
+        android:background="@color/colorTransparent"
         android:id="@+id/welcome_activity_name_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

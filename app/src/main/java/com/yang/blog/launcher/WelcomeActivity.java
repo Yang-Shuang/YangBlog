@@ -13,6 +13,7 @@ import com.daimajia.androidanimations.library.YoYo;
 import com.yang.blog.BuildConfig;
 import com.yang.blog.R;
 import com.yang.blog.base.BaseActivity;
+import com.yang.blog.dialog.SetHostDialog;
 import com.yang.blog.home.activity.MainActivity;
 
 public class WelcomeActivity extends BaseActivity {
@@ -25,14 +26,14 @@ public class WelcomeActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
-
+        showTitleBar(false);
         welcomeactivitynametv = (TextView) findViewById(R.id.welcome_activity_name_tv);
         setHostBtn = (Button) findViewById(R.id.welcome_activity_set_host_tv);
 
         if(BuildConfig.DEBUG){
             setHostBtn.setVisibility(View.VISIBLE);
             setHostBtn.setOnClickListener(v -> {
-
+                SetHostDialog dialog = new SetHostDialog();
             });
         }
 

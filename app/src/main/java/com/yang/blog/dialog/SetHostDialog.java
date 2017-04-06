@@ -7,4 +7,11 @@ package com.yang.blog.dialog;
 
 public class SetHostDialog extends YDialogActivity{
 
+    private SetHostDialog(){
+    }
+
+    @Override
+    protected void initView() {
+
+    }
 }

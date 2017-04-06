@@ -195,4 +195,16 @@ public class NetWorkUtils {
         cancelOrRemove(tag, true);
     }
 
+    public void initLoadingDialog(){
+
+    }
+
+    public void showLoading(){
+
+    }
+
+    public void dimissLoading(){
+
+    }
+
 }
